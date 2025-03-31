@@ -128,9 +128,9 @@ function setup()
     },
 
     avoid = Set {
+	  'ferry',
       'area',
-      'ferry',
-	  -- 'toll',    -- uncomment this to avoid tolls
+      -- 'toll',    -- uncomment this to avoid tolls
       'reversible',
       'impassable',
       'hov_lanes',

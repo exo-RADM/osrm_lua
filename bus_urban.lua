@@ -79,7 +79,7 @@ function setup()
 
     access_tag_blacklist = Set {
       'ferry',
-	  'no',
+      'no',
       'agricultural',
       'forestry',
       'emergency',
@@ -143,7 +143,7 @@ function setup()
     },
 
     avoid = Set {
-		'ferry',
+        'ferry',
         'area',
         -- 'toll',    -- uncomment this to avoid tolls
         --'reversible',

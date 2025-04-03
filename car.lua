@@ -395,6 +395,12 @@ function process_way(profile, way, result, relations)
     return
   end
 
+  if route == "ferry" then
+        result.forward_mode = mode.inaccessible
+        result.backward_mode = mode.inaccessible
+        return
+  end
+	
   handlers = Sequence {
     -- set the default mode for this profile. if can be changed later
     -- in case it turns we're e.g. on a ferry

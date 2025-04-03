@@ -395,11 +395,19 @@ function process_way(profile, way, result, relations)
     return
   end
 
-  if route == "ferry" then
-        result.forward_mode = mode.inaccessible
-        result.backward_mode = mode.inaccessible
-        return
-  end
+  -- Bloquer complètement les ferries
+    if way:get_value_by_key("route") == "ferry" then
+        return false  -- Ignorer complètement cette route
+    end
+	
+	if route == "ferry" then
+		result.forward_mode = mode.inaccessible
+		result.backward_mode = mode.inaccessible
+		result.forward_speed = -1
+		result.backward_speed = -1
+		result.duration = 1000000  -- Durée extrêmement élevée pour rendre la route inutilisable
+		return
+	end
 	
   handlers = Sequence {
     -- set the default mode for this profile. if can be changed later

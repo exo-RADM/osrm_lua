@@ -132,7 +132,7 @@ function setup()
       'ferry',
       'area',
       -- 'toll',    -- uncomment this to avoid tolls
-      'reversible',
+      -- 'reversible',
       'impassable',
       'hov_lanes',
       'steps',
@@ -523,3 +523,4 @@ return {
   process_node = process_node,
   process_turn = process_turn
 }
+
